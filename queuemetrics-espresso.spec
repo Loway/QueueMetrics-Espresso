@@ -45,10 +45,10 @@ cd /usr/local/queuemetrics/espresso
 cd $PWD
 
 %changelog
+* Thu Mar 9 2017 le
+- first release on GitHub - uses Uniloader
 * Tue May 17 2011 le
 - first release
-* 2017.03.09 le
-- first release on GitHub - uses Uniloader
 
 
 
