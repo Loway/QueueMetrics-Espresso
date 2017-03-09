@@ -40,12 +40,12 @@ sed -i -e "s/_VERSION_/$VERSION/g" $FILE
 sed -i -e "s/_RELEASE_/$BN/g" $FILE
 sed -i -e "s/_ARCH_/$ARCH/g" $FILE
 
-#rpmbuild -bb --target=$ARCH \
-#      --define="%_topdir $ABSRPM" \
-#      --define '_binary_payload       w9.gzdio' \
-#      --define '_binary_filedigest_algorithm  1' \
-#      --define '__jar_repack 0' \
-#      $FILE
+rpmbuild -bb --target=$ARCH \
+      --define="%_topdir $ABSRPM" \
+      --define '_binary_payload       w9.gzdio' \
+      --define '_binary_filedigest_algorithm  1' \
+      --define '__jar_repack 0' \
+      $FILE
 
 tree -h $RPMDIR/RPMS
 

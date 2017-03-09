@@ -7,7 +7,7 @@ Source0: espresso.tar.gz
 License: Proprietary
 Group: Asterisk
 BuildRoot: %{_builddir}/%{name}-root
-Requires: uniloader, queuemetrics, wget, perl, dos2unix
+Requires: uniloader, queuemetrics, wget, perl
 Vendor: Loway
 
 %description
