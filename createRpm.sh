@@ -1,8 +1,9 @@
 #! /bin/bash
 
 VERSION=0.0.0
-BASEBUILD=./_BUILD_
-BUILDDIR=$BASEBUILD/queumetrics-espresso-$VERSION
+ROOT=${PWD}
+BASEBUILD=$ROOT/_BUILD_
+BUILDDIR=$BASEBUILD/queuemetrics-espresso-$VERSION
 BN=${BUILD_NUMBER-0}
 TGZ=$BASEBUILD/queuemetrics-espresso-$VERSION.tar.gz
 NOW=$BN-`date -u +%Y%m%d.%H%M`
@@ -24,8 +25,10 @@ mkdir -p $RPMDIR/RPMS/x86_64
 mkdir -p $RPMDIR/SRPMS
 
 # Creates tar
-cp -r queuemetrics-espresso/* $BUILDDIR
-tar zcf $TGZ $BUILDDIR
+cp -r ./queuemetrics-espresso/* $BUILDDIR
+cd $BASEBUILD
+tar zcf $TGZ queuemetrics-espresso-$VERSION
+cd $ROOT
 cp $TGZ $RPMDIR/SOURCES/espresso.tar.gz
 
 ARCH=noarch
