@@ -16,6 +16,12 @@ This will install a working QueueMetrics system on supported distros.
 * The Espresso User Manual http://manuals.loway.ch/QM_Espresso-chunked/
 * The Espresso forum http://forum.queuemetrics.com/index.php?board=16.0
 
+## Supported distros
+
+TBD
+
+
+
 
 
 
