@@ -1,18 +1,17 @@
-Summary: Loway $PROJECTNAME$
-Name: $PROJECTNAME$
-Version: $VERSION$
-Release: $RELEASE$
-BuildArch: noarch
-Source0: $TARFILENAME$
+Summary: QueueMetrics Espresso
+Name: queuemetrics-espresso
+Version: _VERSION_
+Release: _RELEASE_
+BuildArch: _ARCH_
+Source0: espresso.tar.gz
 License: Proprietary
 Group: Asterisk
 BuildRoot: %{_builddir}/%{name}-root
-Requires: qloaderd, queuemetrics, wget, perl
+Requires: uniloader, queuemetrics, wget, perl, dos2unix
 Vendor: Loway
 
 %description
-Attempts quick setup of QueueMetrics.
-Works on Elastix.
+Attempts a quick setup of QueueMetrics.
 
 %prep
 rm -rf %{buildroot}
@@ -48,6 +47,9 @@ cd $PWD
 %changelog
 * Tue May 17 2011 le
 - first release
+* 2017.03.09 le
+- first release on GitHub - uses Uniloader
+
 
 
 
