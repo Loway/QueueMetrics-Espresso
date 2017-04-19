@@ -47,6 +47,7 @@ banner( "RPMs" );
 print "asterisk version " . checkRpm( "asterisk" ) . "\n";
 print "elastix version " . checkRpm( "elastix" ) . "\n";
 print "freepbx version " . checkRpm( "freePBX" ) . "\n";
+print "ombutel version " . checkRpm( "ombutel" ) . "\n";
 print "queuemetrics version " . checkRpm( "queuemetrics" ) . "\n";
 
 assertEqS( "xyzwq version", "", checkRpm( "xyzwq" ) );

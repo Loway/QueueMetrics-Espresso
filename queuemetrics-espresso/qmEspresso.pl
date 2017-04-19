@@ -293,6 +293,15 @@ my @BRAIN = (
       },
       filedir => "./elastix-2.2-qm-13.12-ast-1.8"
   },
+
+{
+      rpms => {
+              'ombutel' => "1.0.11",
+              'asterisk' => "13.13.1",
+              'queuemetrics' => "16.10"
+      },
+      filedir => "./ombutel-1.0-qm-16.10-ast-13.13"
+  },
   
 
 );
@@ -304,6 +313,7 @@ my @PACKAGES = ( "asterisk", "asterisk14", "asterisk16", "asterisk18", "asterisk
 		"freePBX", "freepbx", "freepbxdistro-header", "piafxtras",
     "thirdlane-ast18-scripts", ,"thirdlane-ast16-scripts", "thirdlane-load-ast16", "thirdlane-load-ast18",
     "thirdlane-load-core", "thirdlane-web", "pbxm-st", "pbxm-mt", 
+    "ombutel", 
 		"queuemetrics", "qloaderd", "queuemetrics-espresso" 
 );
 
@@ -314,9 +324,12 @@ my $settings = parmsRpm( $localRpmPtr );
 
 `/usr/bin/wget -O- "http://queuemetrics.loway.ch/quickInstallversion.jsp?settings=$settings&choice=$dirSelected" 2> /dev/null`;
 
+
+
 if ( length( $dirSelected ) > 0 ) {
 	#my $runFile = "${dirSelected}/install.sh";
 	#print "Running $runFile ...\n";
+	print "DI $dirSelected ...\n";
 	system( "cd $dirSelected; ./install.sh" );
 } else {
 	#print "Not found.";
