@@ -6,7 +6,7 @@
 QUEUEMETRICS="/usr/local/queuemetrics/tomcat/webapps/queuemetrics"
 FILESQL="$QUEUEMETRICS/WEB-INF/README/queuemetrics_sample.sql"
 CPROPSQM="$QUEUEMETRICS/WEB-INF/configuration.properties"
-FILEAST="$QUEUEMETRICS/WEB-INF/mysql-utils/extensions-examples/extensions_queuemetrics18.conf"
+FILEAST="$QUEUEMETRICS/WEB-INF/mysql-utils/extensions-examples/extensions_queuemetrics_18.conf"
 FILEELA="/etc/asterisk/extensions_queuemetrics.conf"
 FILEAPP="/etc/asterisk/extensions.conf"
 AMIPASSWD=amp111
