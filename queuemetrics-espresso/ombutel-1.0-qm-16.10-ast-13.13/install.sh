@@ -93,7 +93,6 @@ add $CPROPSQM realtime.useRowCache true
 add $CPROPSQM realtime.agent_autoopenurl true
 
 sleep 5
-yum install -y psmisc
 killall -9  /usr/local/queuemetrics/java/bin/java
 
 /etc/init.d/qloaderd start
