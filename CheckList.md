@@ -25,3 +25,5 @@ QueueMetrics Espresso Check List
 - Ability to monitor an outgoing call from the Real Time Page
 
 - Ability to transfer a call from the Real Time Page
+
+All these funtionalities must be available for both HotDesking and non HotDesking mode.
