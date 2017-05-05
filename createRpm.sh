@@ -1,6 +1,6 @@
 #! /bin/bash
 
-VERSION=0.0.0
+VERSION=0.2.0
 ROOT=${PWD}
 BASEBUILD=$ROOT/_BUILD_
 BUILDDIR=$BASEBUILD/queuemetrics-espresso-$VERSION
