@@ -26,4 +26,6 @@ QueueMetrics Espresso Check List
 
 - Ability to transfer a call from the Real Time Page
 
+- Ability to Hangup a call the Real Time Page
+
 All these funtionalities must be available for both HotDesking and non HotDesking mode.
