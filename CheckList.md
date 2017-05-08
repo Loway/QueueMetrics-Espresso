@@ -1,6 +1,6 @@
 QueueMetrics Espresso Check List
 ---------------------------------------------
-**These are the functionalities that are expected to be found in a succesful QueueMetrics espresso installation.**
+**These are the functionalities that are expected to be found in a successful QueueMetrics espresso installation.**
 
 - Agent login on a queue
 
@@ -25,7 +25,5 @@ QueueMetrics Espresso Check List
 - Ability to monitor an outgoing call from the Real Time Page
 
 - Ability to transfer a call from the Real Time Page
-
-- Ability to Hangup a call the Real Time Page
 
 All these funtionalities must be available for both HotDesking and non HotDesking mode.
