@@ -37,7 +37,7 @@ PWD=`pwd`
 echo "Ombutel - Installing $0 from $PWD";
 echo "File: $FILESQL"
 
-/etc/init.d/qloaderd stop
+/etc/init.d/uniloader stop
 /etc/init.d/queuemetrics stop
 
 echo "" | mysql -uqueuemetrics -pjavadude queuemetrics
@@ -106,10 +106,16 @@ add $CPROPSQM realtime.ajaxPollingDelay 5
 add $CPROPSQM realtime.useRowCache true
 add $CPROPSQM realtime.agent_autoopenurl true
 
+# cos-all sostituisce from-internal
+rv $CPROPSQM realtime.agent_button_4.channel "Local/104@cos-all"
+rv $CPROPSQM callfile.monitoring.channel "Local/$EM@cos-all/n"
+rv $CPROPSQM callfile.outmonitoring.channel "Local/$EM@cos-all/n"
+rv $CPROPSQM callfile.customdial.channel "Local/$EM@cos-all/n"
+
 sleep 5
 killall -9  /usr/local/queuemetrics/java/bin/java
 
-/etc/init.d/qloaderd start
+/etc/init.d/uniloader start
 /etc/init.d/queuemetrics start
 
 allOK
