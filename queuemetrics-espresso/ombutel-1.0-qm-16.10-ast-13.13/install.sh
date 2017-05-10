@@ -14,7 +14,7 @@ echo "Ombutel !";
 QUEUEMETRICS="/usr/local/queuemetrics/tomcat/webapps/queuemetrics"
 FILESQL="$QUEUEMETRICS/WEB-INF/README/queuemetrics_sample.sql"
 CPROPSQM="$QUEUEMETRICS/WEB-INF/configuration.properties"
-FILEAST="$QUEUEMETRICS/WEB-INF/mysql-utils/extensions-examples/extensions_queuemetrics_18.conf"
+FILEAST="extensions_queuemetrics_OMB.conf"
 FILEOMB="/etc/asterisk/ombutel/extensions__60-queuemetrics.conf"
 
 ROOTPASSWD=
@@ -84,7 +84,7 @@ rv $CPROPSQM realtime.members_only false
 rv $CPROPSQM realtime.refresh_time 10
 rv $CPROPSQM callfile.agentlogin.enabled false
 rv $CPROPSQM callfile.agentlogoff.enabled false
-rv $CPROPSQM callfile.transfercall.enabled false
+rv $CPROPSQM callfile.transfercall.enabled true
 
 rv $CPROPSQM default.rewriteLocalChannels false
 
