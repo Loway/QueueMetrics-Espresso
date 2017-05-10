@@ -108,9 +108,9 @@ add $CPROPSQM realtime.agent_autoopenurl true
 
 # cos-all sostituisce from-internal
 rv $CPROPSQM realtime.agent_button_4.channel "Local/104@cos-all"
-rv $CPROPSQM callfile.monitoring.channel "Local/$EM@cos-all/n"
-rv $CPROPSQM callfile.outmonitoring.channel "Local/$EM@cos-all/n"
-rv $CPROPSQM callfile.customdial.channel "Local/$EM@cos-all/n"
+rv $CPROPSQM callfile.monitoring.channel "Local/\$EM@cos-all/n"
+rv $CPROPSQM callfile.outmonitoring.channel "Local/\$EM@cos-all/n"
+rv $CPROPSQM callfile.customdial.channel "Local/\$EM@cos-all/n"
 
 sleep 5
 killall -9  /usr/local/queuemetrics/java/bin/java
