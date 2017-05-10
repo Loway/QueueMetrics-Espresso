@@ -86,7 +86,7 @@ rv $CPROPSQM callfile.agentlogin.enabled false
 rv $CPROPSQM callfile.agentlogoff.enabled false
 rv $CPROPSQM callfile.transfercall.enabled true
 
-rv $CPROPSQM default.rewriteLocalChannels false
+rv $CPROPSQM default.rewriteLocalChannels true
 
 rv $CPROPSQM default.hotdesking 86400
 rv $CPROPSQM default.alwaysLogonUnpaused true
