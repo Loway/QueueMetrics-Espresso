@@ -11,7 +11,7 @@
 QUEUEMETRICS="/usr/local/queuemetrics/tomcat/webapps/queuemetrics"
 FILESQL="$QUEUEMETRICS/WEB-INF/README/queuemetrics_sample.sql"
 CPROPSQM="$QUEUEMETRICS/WEB-INF/configuration.properties"
-FILEAST="$QUEUEMETRICS/WEB-INF/mysql-utils/extensions-examples/extensions_queuemetrics.conf"
+FILEAST="$QUEUEMETRICS/WEB-INF/mysql-utils/extensions-examples/extensions_queuemetrics_18.conf"
 FILEELA="/etc/asterisk/extensions_queuemetrics.conf"
 FILEAPP="/etc/asterisk/user_scripts.include"
 ROOTPASSWD=passw0rd
