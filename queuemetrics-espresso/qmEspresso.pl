@@ -285,7 +285,7 @@ my @BRAIN = (
       filedir => "./freepbx-2.11-qm-13.12"
   },
   
-{
+  {
       rpms => {
               'freePBX' => "2.8.1",
               'asterisk' => "1.8.20",
@@ -294,13 +294,22 @@ my @BRAIN = (
       filedir => "./elastix-2.2-qm-13.12-ast-1.8"
   },
 
-{
+  {
       rpms => {
               'ombutel' => "1.0.11",
               'asterisk' => "13.13.1",
               'queuemetrics' => "16.10"
       },
       filedir => "./ombutel-1.0-qm-16.10-ast-13.13"
+  },
+  
+  {
+      rpms => {
+              'freepbx' => "14.0",
+              'asterisk14' => "14.0",
+              'queuemetrics' => "16.10"
+      },
+      filedir => "./freepbx-14.0-qm-16.10-ast-14.0"
   },
   
 

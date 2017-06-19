@@ -45,8 +45,10 @@ assertEqS( "p1", "X1", matchVersionAsString( \@braintest, { "A" => "1.3", "B" =>
 
 banner( "RPMs" );
 print "asterisk version " . checkRpm( "asterisk" ) . "\n";
+print "asterisk14 version " . checkRpm( "asterisk14" ) . "\n";
 print "elastix version " . checkRpm( "elastix" ) . "\n";
-print "freepbx version " . checkRpm( "freePBX" ) . "\n";
+print "freePBX version " . checkRpm( "freePBX" ) . "\n";
+print "freepbx version " . checkRpm( "freepbx" ) . "\n";
 print "ombutel version " . checkRpm( "ombutel" ) . "\n";
 print "queuemetrics version " . checkRpm( "queuemetrics" ) . "\n";
 
