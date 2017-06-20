@@ -62,7 +62,6 @@ rv $CPROPSQM realtime.agent_button_3.enabled false
 rv $CPROPSQM realtime.agent_button_4.enabled false
 
 rv $CPROPSQM default.monitored_calls /var/spool/asterisk/monitor/
-rv $CPROPSQM layout.logo http://www.loway.ch/images/logo_freepbx_200x72.png
 
 rv $CPROPSQM realtime.members_only false
 rv $CPROPSQM realtime.refresh_time 10
