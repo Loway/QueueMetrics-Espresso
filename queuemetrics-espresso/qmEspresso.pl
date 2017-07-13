@@ -312,6 +312,14 @@ my @BRAIN = (
       filedir => "./freepbx-14.0-qm-16.10-ast-14.0"
   },
   
+  {
+      rpms => {
+              'issabel' => "4.0",
+              'asterisk' => "11.25",
+              'queuemetrics' => "17.06"
+      },
+      filedir => "./issabel-4.0-qm-17.06-ast-11.25"
+  },
 
 );
 
@@ -322,7 +330,7 @@ my @PACKAGES = ( "asterisk", "asterisk14", "asterisk16", "asterisk18", "asterisk
 		"freePBX", "freepbx", "freepbxdistro-header", "piafxtras",
     "thirdlane-ast18-scripts", ,"thirdlane-ast16-scripts", "thirdlane-load-ast16", "thirdlane-load-ast18",
     "thirdlane-load-core", "thirdlane-web", "pbxm-st", "pbxm-mt", 
-    "ombutel", 
+    "ombutel", "issabel", 
 		"queuemetrics", "qloaderd", "queuemetrics-espresso" 
 );
 
@@ -330,6 +338,7 @@ my $localRpmPtr = checkRpms( @PACKAGES );
 my $brainPtr = matchVersion( \@BRAIN, $localRpmPtr );
 my $dirSelected = ${$brainPtr}{'filedir'};
 my $settings = parmsRpm( $localRpmPtr );
+
 
 `/usr/bin/wget -O- "http://queuemetrics.loway.ch/quickInstallversion.jsp?settings=$settings&choice=$dirSelected" 2> /dev/null`;
 
