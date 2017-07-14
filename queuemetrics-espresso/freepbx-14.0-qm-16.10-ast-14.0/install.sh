@@ -29,7 +29,7 @@ PWD=`pwd`
 echo "FreePBX - Installing $0 from $PWD";
 echo "File: $FILESQL"
 
-/etc/init.d/qloaderd stop
+/etc/init.d/uniloader stop
 /etc/init.d/queuemetrics stop
 
 
@@ -112,7 +112,7 @@ add $CPROPSQM realtime.agent_autoopenurl true
 sleep 5
 killall -9  /usr/local/queuemetrics/java/bin/java
 
-/etc/init.d/qloaderd start
+/etc/init.d/uniloader start
 /etc/init.d/queuemetrics start
 
 allOK
