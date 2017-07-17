@@ -46,7 +46,7 @@ if [ $? -ge 1 ]; then
 
 echo "Creating database"
 
-mysql -uroot -p$ROOTPASSWD mysql <<"EOF"
+mysql -uroot mysql <<"EOF"
   CREATE DATABASE IF NOT EXISTS queuemetrics;
   GRANT ALL PRIVILEGES ON queuemetrics.* TO 'queuemetrics'@'localhost' IDENTIFIED BY  'javadude';
 EOF
