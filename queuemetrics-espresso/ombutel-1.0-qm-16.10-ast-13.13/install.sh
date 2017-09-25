@@ -113,15 +113,7 @@ rv $CPROPSQM callfile.outmonitoring.channel "Local/\$EM@cos-all/n"
 rv $CPROPSQM callfile.customdial.channel "Local/\$EM@cos-all/n"
 
 # Enabling DirectAMI 
-add $CPROPSQM platform.pbx "DIRECTAMI"
-add $CPROPSQM platform.directami.agent "Agent/\${num}"
-add $CPROPSQM platform.directami.extension "SIP/\${num}"
-add $CPROPSQM platform.directami.transfer "\${num}@cos-all"
-add $CPROPSQM platform.directami.outbound.enabled "true"
-add $CPROPSQM platform.directami.outbound.stanza "28@queuemetrics"
-add $CPROPSQM platform.directami.localext "SIP/\${num}"
-add $CPROPSQM platform.directami.spyoptions "b"
-add $CPROPSQM platform.directami.verbose "false"
+rv $CPROPSQM platform.directami.transfer "\${num}@cos-all"
 
 sleep 5
 killall -9  /usr/local/queuemetrics/java/bin/java
