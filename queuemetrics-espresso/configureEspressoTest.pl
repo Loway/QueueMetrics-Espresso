@@ -51,6 +51,7 @@ print "freePBX version " . checkRpm( "freePBX" ) . "\n";
 print "freepbx version " . checkRpm( "freepbx" ) . "\n";
 print "ombutel version " . checkRpm( "ombutel" ) . "\n";
 print "queuemetrics version " . checkRpm( "queuemetrics" ) . "\n";
+print "CompletePBX version " . checkRpm( "ombutel-cpbx" ) . "\n";
 
 assertEqS( "xyzwq version", "", checkRpm( "xyzwq" ) );
 

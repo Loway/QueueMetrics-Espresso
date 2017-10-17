@@ -305,6 +305,15 @@ my @BRAIN = (
   
   {
       rpms => {
+              'ombutel-cpbx' => "1.0.32",
+              'asterisk' => "13.17.2",
+              'queuemetrics' => "17.06"
+      },
+      filedir => "./completepbx-1.0-qm-17.06-ast-13.17"
+  },
+
+  {
+      rpms => {
               'freepbx' => "14.0",
               'asterisk14' => "14.0",
               'queuemetrics' => "16.10"
@@ -330,7 +339,7 @@ my @PACKAGES = ( "asterisk", "asterisk14", "asterisk16", "asterisk18", "asterisk
 		"freePBX", "freepbx", "freepbxdistro-header", "piafxtras",
     "thirdlane-ast18-scripts", ,"thirdlane-ast16-scripts", "thirdlane-load-ast16", "thirdlane-load-ast18",
     "thirdlane-load-core", "thirdlane-web", "pbxm-st", "pbxm-mt", 
-    "ombutel", "issabel", 
+    "ombutel", "issabel", "ombutel-cpbx",
 		"queuemetrics", "qloaderd", "queuemetrics-espresso" 
 );
 
