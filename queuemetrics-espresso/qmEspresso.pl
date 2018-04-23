@@ -324,7 +324,7 @@ my @BRAIN = (
   {
       rpms => {
               'issabel' => "4.0",
-              'asterisk' => "11.25",
+              'asterisk13' => "13.0",
               'queuemetrics' => "17.06"
       },
       filedir => "./issabel-4.0-qm-17.06-ast-11.25"
