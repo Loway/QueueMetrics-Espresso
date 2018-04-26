@@ -17,8 +17,15 @@ This will install a working QueueMetrics system on supported distros.
 * The Espresso forum http://forum.queuemetrics.com/index.php?board=16.0
 
 ## Supported distros
-
-TBD
+	Issabel
+	FreePBX
+	ThirdLane
+	CompletePBX
+	Ombutel
+	Elastix
+     AsteriskNow
+	Trixbox
+	pbxinaflash
 
 
 
