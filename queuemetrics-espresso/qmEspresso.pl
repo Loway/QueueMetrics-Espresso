@@ -330,10 +330,60 @@ my @BRAIN = (
       filedir => "./issabel-4.0-qm-17.06-ast-11.25"
   },
 
+
+  {
+      rpms => {
+              'freepbx' => "13.0",
+              'asterisk13' => "13.0",
+              'queuemetrics' => "19.04"
+      },
+      filedir => "./freepbx-14"
+  },
+  {
+      rpms => {
+              'freepbx' => "13.0",
+              'asterisk11' => "11.0",
+              'queuemetrics' => "19.04"
+      },
+      filedir => "./freepbx-14"
+  },
+  {
+      rpms => {
+              'freepbx' => "14.0",
+              'asterisk13' => "13.0",
+              'queuemetrics' => "19.04"
+      },
+      filedir => "./freepbx-14"
+  },
+  {
+      rpms => {
+              'freepbx' => "14.0",
+              'asterisk14' => "14.0",
+              'queuemetrics' => "19.04"
+      },
+      filedir => "./freepbx-14"
+  },
+  {
+      rpms => {
+              'freepbx' => "14.0",
+              'asterisk15' => "15.0",
+              'queuemetrics' => "19.04"
+      },
+      filedir => "./freepbx-14"
+  },
+  {
+      rpms => {
+              'freepbx' => "14.0",
+              'asterisk16' => "16.0",
+              'queuemetrics' => "19.04"
+      },
+      filedir => "./freepbx-14"
+  }
+
 );
 
 
-my @PACKAGES = ( "asterisk", "asterisk14", "asterisk16", "asterisk18", "asterisk-core", "asterisk10", "asterisk11", "asterisk12", "asterisk13",
+my @PACKAGES = ( "asterisk", "asterisk14", "asterisk15", "asterisk16", "asterisk18", "asterisk-core", "asterisk10", "asterisk11", "asterisk12", "asterisk13",
 		"asterisknow-version", 
 		"elastix", "trixbox", "goautodial-ce",
 		"freePBX", "freepbx", "freepbxdistro-header", "piafxtras",
