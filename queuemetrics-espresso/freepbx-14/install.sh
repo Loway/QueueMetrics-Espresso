@@ -174,10 +174,10 @@ mainTechnology=$(mysql -uroot asterisk -se "
 
 if [ "$mainTechnology" == "sip" ]; then
     echo "Setting SIP as main main technology."
-    ${SETPROPS} --property "platform.directami.extension" --value "SIP/\${NUM}"
+    ${SETPROPS} --property "platform.directami.extension" --value "SIP/\${num}"
 else
     echo "Setting PJSIP as main technology."
-    ${SETPROPS} --property "platform.directami.extension" --value "PJSIP/\${NUM}"
+    ${SETPROPS} --property "platform.directami.extension" --value "PJSIP/\${num}"
 fi
 
 # Creare file configurazione per qmSync
