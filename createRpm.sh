@@ -1,12 +1,23 @@
-#! /bin/bash
+#!/bin/bash
 
-VERSION=19.06.1
+VERSION=19.06.2
 ROOT=${PWD}
 BASEBUILD=$ROOT/_BUILD_
 BUILDDIR=$BASEBUILD/queuemetrics-espresso-$VERSION
 BN=${BUILD_NUMBER-0}
 TGZ=$BASEBUILD/queuemetrics-espresso-$VERSION.tar.gz
 NOW=$BN-`date -u +%Y%m%d.%H%M`
+
+# PREREQUISITIES
+for BINARY in rpmbuild tree tar dos2unix
+do
+        which "${BINARY}" > /dev/null 2>&1
+        if [ "${?}" != "0" ]
+        then
+                echo "You need "${BINARY}" to execute this script; aborting..."
+                exit 1
+        fi
+done
 
 echo "Now building QueueMetrics Espresso version $VERSION - $NOW"
 

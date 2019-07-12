@@ -39,17 +39,17 @@ rm -rf %{_topdir}/BUILD/%{name}
 /usr/local/queuemetrics/espresso
 
 %post
-PWD=`pwd`
-cd /usr/local/queuemetrics/espresso
-./qmEspresso.pl
-cd $PWD
+# Run only at the first install
+if [ $1 -eq 1 ]
+then
+	PWD=`pwd`
+	cd /usr/local/queuemetrics/espresso
+	./qmEspresso.pl
+	cd $PWD
+fi
 
 %changelog
 * Thu Mar 9 2017 le
 - first release on GitHub - uses Uniloader
 * Tue May 17 2011 le
 - first release
-
-
-
-
