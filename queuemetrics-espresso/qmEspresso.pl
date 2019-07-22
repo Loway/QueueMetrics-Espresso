@@ -330,6 +330,17 @@ my @BRAIN = (
       filedir => "./issabel-4.0-qm-17.06-ast-11.25"
   },
 
+  
+  {
+      rpms => {
+              'issabel' => "4.0",
+              'asterisk11' => "11.0",
+              'queuemetrics' => "17.06"
+      },
+      filedir => "./issabel-4.0-qm-17.06-ast-11.25"
+  },
+
+
 
   {
       rpms => {
