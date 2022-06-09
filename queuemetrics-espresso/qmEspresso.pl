@@ -358,7 +358,7 @@ my @BRAIN = (
 my @PACKAGES = ( "asterisk", "asterisk14", "asterisk15", "asterisk16", "asterisk18", "asterisk-core", "asterisk10", "asterisk11", "asterisk12", "asterisk13",
 		"asterisknow-version", 
 		"elastix", "trixbox", "goautodial-ce",
-		"freePBX", "freepbx", "freepbxdistro-header", "piafxtras",
+		"freePBX", "freepbx", "freepbx16", "freepbxdistro-header", "piafxtras",
 		"thirdlane-ast18-scripts", ,"thirdlane-ast16-scripts", "thirdlane-load-ast16", "thirdlane-load-ast18",
 		"thirdlane-load-core", "thirdlane-web", "pbxm-st", "pbxm-mt",
 		"ombutel", "issabel", "ombutel-cpbx",
