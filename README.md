@@ -7,23 +7,24 @@ automatically on most common Asterisk distributions. See https://www.queuemetric
 
 If you just want to install QueueMetrics, you need to enter:
 
-     wget -P /etc/yum.repos.d http://yum.loway.ch/loway.repo
+     wget https://yum.loway.ch/loway.repo -O /etc/yum.repos.d/loway.repo
      yum install queuemetrics-espresso
 
 
 This will install a working QueueMetrics system on supported distros.
 
-* The Espresso User Manual http://manuals.loway.ch/QM_Espresso-chunked/
-* The Espresso forum http://forum.queuemetrics.com/index.php?board=16.0
+* The Espresso User Manual https://docs.loway.ch/QueueMetrics_Espresso
 
 ## Supported distros
-	Issabel
 	FreePBX
+
+## Previously supported distros
+	Issabel
 	ThirdLane
 	CompletePBX
 	Ombutel
 	Elastix
-     AsteriskNow
+	AsteriskNow
 	Trixbox
 	pbxinaflash
 
