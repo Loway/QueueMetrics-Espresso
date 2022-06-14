@@ -44,36 +44,37 @@ cp /usr/local/queuemetrics/qm-current/WEB-INF/mysql-utils/extensions-examples/ex
 sed '/exten => 28/ s=SIP=PJSIP=' -i /etc/asterisk/extensions_queuemetrics.conf
 asterisk -rx "core reload"
 
+uniloader cfgfile put --forced-replacement 1 -p "callfile.agentlogin.enabled" -v "false"
+uniloader cfgfile put --forced-replacement 1 -p "callfile.agentlogoff.enabled" -v "false"
 uniloader cfgfile put --forced-replacement 1 -p "callfile.dir" -v "tcp:queuemetrics:${AMI_PASSWORD}@127.0.0.1"
+uniloader cfgfile put --forced-replacement 1 -p "callfile.transfercall.enabled" -v "true"
+uniloader cfgfile put --forced-replacement 1 -p "cluster.freepbx.callfile.dir" -v "tcp:queuemetrics:${AMI_PASSWORD}@127.0.0.1"
+uniloader cfgfile put --forced-replacement 1 -p "cluster.freepbx.manager" -v "tcp:queuemetrics:${AMI_PASSWORD}@127.0.0.1"
+uniloader cfgfile put --forced-replacement 1 -p "cluster.freepbx.monitored_calls" -v "/var/spool/asterisk/monitor/"
+uniloader cfgfile put --forced-replacement 1 -p "cluster.freepbx.queuelog" -v "sql:P001"
+uniloader cfgfile put --forced-replacement 1 -p "cluster.servers" -v "freepbx"
+uniloader cfgfile put --forced-replacement 1 -p "default.alwaysLogonUnpaused" -v "true"
+uniloader cfgfile put --forced-replacement 1 -p "default.crmapp" -v "https://www.queuemetrics.com/sample_screen_pop.jsp?agent=[A]\&unique=[U]"
+uniloader cfgfile put --forced-replacement 1 -p "default.exitOnAgentDumpSysCompat" -v "false"
+uniloader cfgfile put --forced-replacement 1 -p "default.hotdesking" -v "86400"
+uniloader cfgfile put --forced-replacement 1 -p "default.monitored_calls" -v "/var/spool/asterisk/monitor/"
 uniloader cfgfile put --forced-replacement 1 -p "default.queue_log_file" -v "sql:P001"
-uniloader cfgfile put --forced-replacement 1 -p "realtime.max_bytes_agent" -v "65000"
+uniloader cfgfile put --forced-replacement 1 -p "default.rewriteLocalChannels" -v "true"
+uniloader cfgfile put --forced-replacement 1 -p "default.synchronizer_mode" -v "CR_UPD_USR"
+uniloader cfgfile put --forced-replacement 1 -p "platform.directami.extension" -v "PJSIP/\${num}"
+uniloader cfgfile put --forced-replacement 1 -p "platform.directami.outbound.enabled" -v "true"
+uniloader cfgfile put --forced-replacement 1 -p "realtime.agent_autoopenurl" -v "true"
 uniloader cfgfile put --forced-replacement 1 -p "realtime.agent_button_1.enabled" -v "false"
 uniloader cfgfile put --forced-replacement 1 -p "realtime.agent_button_2.enabled" -v "false"
 uniloader cfgfile put --forced-replacement 1 -p "realtime.agent_button_3.enabled" -v "false"
 uniloader cfgfile put --forced-replacement 1 -p "realtime.agent_button_4.enabled" -v "false"
-uniloader cfgfile put --forced-replacement 1 -p "default.monitored_calls" -v "/var/spool/asterisk/monitor/"
+uniloader cfgfile put --forced-replacement 1 -p "realtime.ajaxPollingDelay" -v "5"
+uniloader cfgfile put --forced-replacement 1 -p "realtime.max_bytes_agent" -v "65000"
 uniloader cfgfile put --forced-replacement 1 -p "realtime.members_only" -v "false"
 uniloader cfgfile put --forced-replacement 1 -p "realtime.refresh_time" -v "10"
-uniloader cfgfile put --forced-replacement 1 -p "callfile.agentlogin.enabled" -v "false"
-uniloader cfgfile put --forced-replacement 1 -p "callfile.agentlogoff.enabled" -v "false"
-uniloader cfgfile put --forced-replacement 1 -p "callfile.transfercall.enabled" -v "true"
-uniloader cfgfile put --forced-replacement 1 -p "default.rewriteLocalChannels" -v "true"
-uniloader cfgfile put --forced-replacement 1 -p "default.hotdesking" -v "86400"
-uniloader cfgfile put --forced-replacement 1 -p "default.alwaysLogonUnpaused" -v "true"
-uniloader cfgfile put --forced-replacement 1 -p "cluster.servers" -v "freepbx"
-uniloader cfgfile put --forced-replacement 1 -p "default.crmapp" -v "https://www.queuemetrics.com/sample_screen_pop.jsp?agent=[A]\&unique=[U]"
-uniloader cfgfile put --forced-replacement 1 -p "cluster.freepbx.manager" -v "tcp:queuemetrics:${AMI_PASSWORD}@127.0.0.1"
-uniloader cfgfile put --forced-replacement 1 -p "cluster.freepbx.queuelog" -v "sql:P001"
-uniloader cfgfile put --forced-replacement 1 -p "cluster.freepbx.monitored_calls" -v "/var/spool/asterisk/monitor/"
-uniloader cfgfile put --forced-replacement 1 -p "cluster.freepbx.callfile.dir" -v "tcp:queuemetrics:${AMI_PASSWORD}@127.0.0.1"
 uniloader cfgfile put --forced-replacement 1 -p "realtime.useActivePolling" -v "true"
-uniloader cfgfile put --forced-replacement 1 -p "realtime.ajaxPollingDelay" -v "5"
 uniloader cfgfile put --forced-replacement 1 -p "realtime.useRowCache" -v "true"
-uniloader cfgfile put --forced-replacement 1 -p "realtime.agent_autoopenurl" -v "true"
-uniloader cfgfile put --forced-replacement 1 -p "default.exitOnAgentDumpSysCompat" -v "false"
-uniloader cfgfile put --forced-replacement 1 -p "platform.directami.extension" -v "PJSIP/\${num}"
-uniloader cfgfile put --forced-replacement 1 -p "platform.directami.outbound.enabled" -v "true"
-uniloader cfgfile put --forced-replacement 1 -p "default.synchronizer_mode" -v "CR_UPD_USR"
+
 uniloader user --login queuemetrics --pwd javadude add-class -c ADMIN -k "MON_AUDIO MON_WHISPER MON_BARGE MON_VNC MON_IM"
 
 
@@ -90,3 +91,18 @@ then
 	chown -R asterisk:asterisk /var/www/html/admin/modules/queuemetrics
 	fwconsole ma install queuemetrics
 fi
+
+cat > /etc/sysconfig/uniloader <<EOF
+QUEUELOG=/var/log/asterisk/queue_log
+LOGFILE=/var/log/asterisk/uniloader.log
+LOCKFILE=/var/lock/subsys/uniloader
+PIDFILE=/run/uniloader.pid
+
+# On-premise QueueMetrics instance
+URI="mysql:tcp(127.0.0.1:3306)/queuemetrics?allowOldPasswords=1"
+LOGIN=queuemetrics
+PASS=javadude
+TOKEN=P001
+EOF
+
+/etc/init.d/uniloader start
