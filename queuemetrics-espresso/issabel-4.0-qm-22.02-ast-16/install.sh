@@ -21,6 +21,17 @@ mysql -p"${MYSQL_ROOT_PASSWORD}" -e "CREATE USER 'queuemetrics'@'localhost' iden
 mysql -p"${MYSQL_ROOT_PASSWORD}" -e "grant all on queuemetrics.* to 'queuemetrics'@'localhost';"
 mysql -uqueuemetrics -pjavadude queuemetrics < /usr/local/queuemetrics/qm-current/WEB-INF/README/queuemetrics_sample.sql
 
+uniloader \
+	pbxinfo \
+	--mode "syncqm" \
+	--uri "http://127.0.0.1:8080/queuemetrics" \
+	--login "demoadmin" \
+	--pass "demo" \
+	--all-queues "1" \
+	issabel \
+	--dburi "localhost/asterisk" \
+	--login "root" \
+	--pwd "${MYSQL_ROOT_PASSWORD}"
 
 AMI_PASSWORD="$( < /dev/urandom tr -dc A-Z-a-z-0-9 | head -c${1:-15} )"
 
